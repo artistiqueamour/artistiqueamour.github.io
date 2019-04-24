@@ -35,12 +35,33 @@
             margin-left: 0
         }
     }
+
+    .portfoliobtn {
+        background-color: goldenrod;
+        color: black;
+        font-size: 20px;
+    }
 </style>
 <script>
     function onClick(element) {
         document.getElementById("img01").src = element.src;
         document.getElementById("modal01").style.display = "block";
     }
+    function myFunct(id) {
+        var x = document.getElementById(id);
+        if (x.classList) {
+            x.classList.toggle("w3-show");
+            x.previousElementSibling.classList.toggle("w3-dark-grey");
+        } else {
+            // Fallback for IE9 and earlier
+            if (x.className.indexOf("w3-show") == -1)
+                x.className = x.className + " w3-show";
+            else
+                x.className = x.className.replace("w3-show", "");
+        }
+    }
+
+
 </script>
 
 <body class="">
@@ -81,9 +102,9 @@
             <header class="w3-col s6 w3-center" style="padding:218px 16px">
                 <h1 class="w3-jumbo">I'm Ankita Kiran</h1>
                 <p>Fashion & Designing Undergraduate</p>
-                <button class="w3-button w3-light-grey w3-padding-large w3-section">
-                    <i class="fa fa-download"></i> Download Resume
-                </button>
+                <a href="img/resume .jpg" download><button class="w3-button w3-light-grey w3-padding-large w3-section">
+                        <i class="fa fa-download" aria-hidden="true"></i> Download Resume
+                    </button></a>
             </header>
         </div>
 
@@ -91,13 +112,21 @@
         <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
             <h2 class="w3-text-grey">Ankita Kiran</h2>
             <p>Myself Ankita Kiran a fashion designer and an artist. I consider myself as a fairly creative
-                as well as an energetic person. I'm hard-worker as well as passionate about my work, my dreams ,
+                as well as an energetic women. I'm hard-worker as well as passionate about my work, my dreams ,
                 my career. It's me who r capable enough to do anything which comes in the term of Creativity,
                 Designing, Styling, Painting and Photography. I seek to work for a successful company that has
                 strong leadership and vision and who recognizes and rewards performers.
                 According to me Fashion is a way of presenting urself in a better version, according to the flow.
             </p>
-            <h3 class="w3-padding-16 w3-text-grey">My Skills</h3>
+            <br />
+            <h3 class="w3-padding-16 w3-text-grey">My Education</h3>
+            <div class="w3-panel w3-orange w3-topbar w3-bottombar w3-border-amber">
+                <h4><b>Vogue Institute of Fashion Technology, Bangalore</b></h4>
+                <h6>Bachelor of Fashion Designing</h6>
+                <h6>2017-20</h6>
+            </div>
+            <br />
+            <h3 class="w3-padding-16 w3-text-grey">My Software Skills</h3>
             <p class="w3-wide">MS Powerpoint</p>
             <div class="w3-white">
                 <div class="w3-dark-grey" style="height:28px;width:95%"></div>
@@ -109,7 +138,16 @@
             <p class="w3-wide">Adobe Photoshop</p>
             <div class="w3-white">
                 <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-            </div><br>
+            </div>
+            <br />
+            <h3 class="w3-padding-16 w3-text-grey">My Experience</h3>
+            <ul>
+                <li>Worked for VIFT fashion shows.</li>
+                <li>Volunteer at FBB Femina South 2019 fashion show.</li>
+                <li>Volunteer at RAW MANGO Runway show.</li>
+                <li>Volunteer at BLENDER PRIDE fashion tour.</li>
+            </ul>
+            <br />
             <!-- End About Section -->
         </div>
 
@@ -119,8 +157,10 @@
             <hr style="width:200px" class="w3-opacity">
 
             <!-- Grid for photos -->
-            <div>
-                <h2 class="w3-text-light-grey">Artwork</h2>
+            <button onclick="myFunct('artwork')" class="w3-button w3-block w3-left-align portfoliobtn">Artwork<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="artwork" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_1.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -138,7 +178,7 @@
                         <img src="img/Artwork/Artwork_4.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_5.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -156,7 +196,7 @@
                         <img src="img/Artwork/Artwork_8.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_9.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -174,7 +214,7 @@
                         <img src="img/Artwork/Artwork_12.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_13.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -192,7 +232,7 @@
                         <img src="img/Artwork/Artwork_16.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_17.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -210,7 +250,7 @@
                         <img src="img/Artwork/Artwork_20.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Artwork/Artwork_21.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -224,11 +264,12 @@
                         <img src="img/Artwork/Artwork_23.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Crafty</h2>
+            <button onclick="myFunct('crafty')" class="w3-button w3-block w3-left-align portfoliobtn">Crafty<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="crafty" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/crafty/crafty_1.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -246,7 +287,7 @@
                         <img src="img/crafty/crafty_4.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/crafty/crafty_5.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -264,7 +305,7 @@
                         <img src="img/crafty/crafty_8.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/crafty/crafty_9.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -282,7 +323,7 @@
                         <img src="img/crafty/crafty_12.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/crafty/crafty_13.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -292,11 +333,12 @@
                         <img src="img/crafty/crafty_14.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Design Work</h2>
+            <button onclick="myFunct('designwork')" class="w3-button w3-block w3-left-align portfoliobtn">Design Work<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="designwork" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Design work/Design work_1.jpg" style="width:100%;cursor:pointer"
@@ -314,18 +356,19 @@
                         <img src="img/Design work/Design work_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Design work/Design work_5.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
 
-
-            <div>
-                <h2 class="w3-text-light-grey">Fabric Rendering</h2>
+            <button onclick="myFunct('fabricrendering')" class="w3-button w3-block w3-left-align portfoliobtn">Fabric
+                Rendering<i class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="fabricrendering" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/fabric rendering/fabric rendering_1.jpg" style="width:100%;cursor:pointer"
@@ -343,7 +386,7 @@
                         <img src="img/fabric rendering/fabric rendering_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/fabric rendering/fabric rendering_5.jpg" style="width:100%;cursor:pointer"
@@ -361,7 +404,7 @@
                         <img src="img/fabric rendering/fabric rendering_8.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/fabric rendering/fabric rendering_9.jpg" style="width:100%;cursor:pointer"
@@ -371,11 +414,13 @@
                         <img src="img/fabric rendering/fabric rendering_10.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Masaba Gupta Inspired Collection</h2>
+            <button onclick="myFunct('masaba')" class="w3-button w3-block w3-left-align portfoliobtn">Masaba Gupta
+                Inspired Collection<i class="fa fa-caret-down"
+                    style="font-size:24px;color:black;float: right"></i></button>
+            <div id="masaba" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/MASABA GUPTA inspired collections/MASABA GUPTA inspired collections_1.jpg"
@@ -393,7 +438,7 @@
                         <img src="img/MASABA GUPTA inspired collections/MASABA GUPTA inspired collections_4.jpg"
                             style="width:100%;cursor:pointer" onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/MASABA GUPTA inspired collections/MASABA GUPTA inspired collections_5.jpg"
@@ -407,11 +452,12 @@
                         <img src="img/MASABA GUPTA inspired collections/MASABA GUPTA inspired collections_7.jpg"
                             style="width:100%;cursor:pointer" onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Patterns</h2>
+            <button onclick="myFunct('patterns')" class="w3-button w3-block w3-left-align portfoliobtn">Patterns<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="patterns" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Patterns/Patterns_1.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -429,7 +475,7 @@
                         <img src="img/Patterns/Patterns_4.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Patterns/Patterns_5.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
@@ -443,11 +489,12 @@
                         <img src="img/Patterns/Patterns_7.jpg" style="width:100%;cursor:pointer" onclick="onClick(this)"
                             class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Potrait Painting</h2>
+            <button onclick="myFunct('portrait')" class="w3-button w3-block w3-left-align portfoliobtn">Potrait
+                Painting<i class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="portrait" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/portrait painting/portrait painting_1.jpg" style="width:100%;cursor:pointer"
@@ -465,7 +512,7 @@
                         <img src="img/portrait painting/portrait painting_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/portrait painting/portrait painting_5.jpg" style="width:100%;cursor:pointer"
@@ -479,11 +526,12 @@
                         <img src="img/portrait painting/portrait painting_7.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Principle of Design</h2>
+            <button onclick="myFunct('pod')" class="w3-button w3-block w3-left-align portfoliobtn">Principle of Design<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="pod" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Principle of design/Principle of design_1.jpg" style="width:100%;cursor:pointer"
@@ -501,7 +549,7 @@
                         <img src="img/Principle of design/Principle of design_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Principle of design/Principle of design_5.jpg" style="width:100%;cursor:pointer"
@@ -519,17 +567,18 @@
                         <img src="img/Principle of design/Principle of design_8.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Principle of design/Principle of design_9.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Regional Costumes</h2>
+            <button onclick="myFunct('regionalcos')" class="w3-button w3-block w3-left-align portfoliobtn">Regional
+                Costumes<i class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="regionalcos" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Regional costumes/Regional costumes_1.jpg" style="width:100%;cursor:pointer"
@@ -547,7 +596,7 @@
                         <img src="img/Regional costumes/Regional costumes_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Regional costumes/Regional costumes_5.jpg" style="width:100%;cursor:pointer"
@@ -557,11 +606,13 @@
                         <img src="img/Regional costumes/Regional costumes_6.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Tommy Hilfiger Inspired Collection</h2>
+            <button onclick="myFunct('tommy')" class="w3-button w3-block w3-left-align portfoliobtn">Tommy Hilfiger
+                Inspired Collection<i class="fa fa-caret-down"
+                    style="font-size:24px;color:black;float: right"></i></button>
+            <div id="tommy" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Tommy Hilfiger inspired collections/Tommy Hilfiger inspired collections_1.jpg"
@@ -579,7 +630,7 @@
                         <img src="img/Tommy Hilfiger inspired collections/Tommy Hilfiger inspired collections_4.jpg"
                             style="width:100%;cursor:pointer" onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/Tommy Hilfiger inspired collections/Tommy Hilfiger inspired collections_5.jpg"
@@ -589,11 +640,12 @@
                         <img src="img/Tommy Hilfiger inspired collections/Tommy Hilfiger inspired collections_6.jpg"
                             style="width:100%;cursor:pointer" onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">Watercolor Artwork</h2>
+            <button onclick="myFunct('watercolor')" class="w3-button w3-block w3-left-align portfoliobtn">Watercolor
+                Artwork<i class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="watercolor" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/watercolor artwork/watercolor artwork_1.jpg" style="width:100%;cursor:pointer"
@@ -611,7 +663,7 @@
                         <img src="img/watercolor artwork/watercolor artwork_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/watercolor artwork/watercolor artwork_5.jpg" style="width:100%;cursor:pointer"
@@ -629,7 +681,7 @@
                         <img src="img/watercolor artwork/watercolor artwork_8.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/watercolor artwork/watercolor artwork_9.jpg" style="width:100%;cursor:pointer"
@@ -647,11 +699,12 @@
                         <img src="img/watercolor artwork/watercolor artwork_12.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
-
-            <div>
-                <h2 class="w3-text-light-grey">World Costume</h2>
+            <button onclick="myFunct('worldcos')" class="w3-button w3-block w3-left-align portfoliobtn">World Costume<i
+                    class="fa fa-caret-down" style="font-size:24px;color:black;float: right"></i></button>
+            <div id="worldcos" class="w3-hide">
+                <br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/World costumes/World costumes_1.jpg" style="width:100%;cursor:pointer"
@@ -669,7 +722,7 @@
                         <img src="img/World costumes/World costumes_4.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/World costumes/World costumes_5.jpg" style="width:100%;cursor:pointer"
@@ -687,7 +740,7 @@
                         <img src="img/World costumes/World costumes_8.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
                 <div class="w3-row-padding">
                     <div class="w3-container w3-quarter">
                         <img src="img/World costumes/World costumes_9.jpg" style="width:100%;cursor:pointer"
@@ -705,7 +758,7 @@
                         <img src="img/World costumes/World costumes_12.jpg" style="width:100%;cursor:pointer"
                             onclick="onClick(this)" class="w3-hover-opacity">
                     </div>
-                </div>
+                </div><br />
             </div>
             <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
                 <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -734,13 +787,16 @@
 
         <!-- Footer -->
         <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
-            <a href="https://www.facebook.com/ankita.kiran.7" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/artistique_amour" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/anki_27_pandey" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href="" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
-            <a href="" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-            <a href="" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-            <a href="https://www.linkedin.com/in/ankita-kiran-5909b3172" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            <a href="https://www.facebook.com/ankita.kiran.7" target="_blank"><i
+                    class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/artistique_amour" target="_blank"><i
+                    class="fa fa-instagram w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/anki_27_pandey" target="_blank"><i
+                    class="fa fa-instagram w3-hover-opacity"></i></a>
+            <a href="https://in.pinterest.com/kiran2982/" target="_blank"><i
+                    class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+            <a href="https://www.linkedin.com/in/ankita-kiran-5909b3172" target="_blank"><i
+                    class="fa fa-linkedin w3-hover-opacity"></i></a>
             <p class="w3-medium">Made by <a href="https://ankit311.github.io/" target="_blank"
                     class="w3-hover-text-green"> <img src="img/favicon.jpg" width="18" height="18" alt="logo" />
                 </a></p>
